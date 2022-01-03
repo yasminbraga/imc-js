@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2 class="title">Calculadora de IMC</h2>
+
+        <form>
+          <div class="field">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Digite seu nome "
+            />
+          </div>
+
+          <div class="field-gender d-flex">
+            <div class="gender-field">
+              <input
+                class="gender-checkbox"
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+              />
+              <label for="male">
+                <span class="material-icons md-48">male</span>
+                masculino
+              </label>
+            </div>
+
+            <div class="gender-field">
+              <input
+                class="gender-checkbox"
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+              />
+              <label for="female">
+                <span class="material-icons md-48">female</span>
+                feminino
+              </label>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="field m-right position">
+              <label for="weight">Peso</label>
+              <input
+                type="number"
+                name="weight"
+                id="weight"
+                min="0"
+                placeholder="0"
+              />
+              <div class="d-flex buttons">
+                <button class="btn sub-weight" type="button">
+                  <span class="material-icons">remove</span>
+                </button>
+                <button class="btn sum-weight" type="button">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="field position">
+              <label for="age">Idade</label>
+              <input
+                type="number"
+                name="age"
+                id="age"
+                min="0"
+                placeholder="0"
+              />
+              <div class="d-flex buttons">
+                <button class="btn sub-age" type="button">
+                  <span class="material-icons">remove</span>
+                </button>
+                <button class="btn sum-age" type="button">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="height">Altura</label>
+            <span id="height-value">0</span>
+            <input type="range" name="height" id="height" min="1" max="251" />
+          </div>
+
+          <button class="submit-btn" type="button" onclick="computeIMC()">
+            Calcular
+          </button>
+        </form>
+      </div>
+      <div class="result" id="result-div"></div>
+    </div>
+    <script src="/scripts.js"></script>
+  </body>
+</html>
